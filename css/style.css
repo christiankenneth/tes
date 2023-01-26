@@ -436,7 +436,7 @@ header.sticky{
 	margin-bottom: 25px;
 }
 .contact .action form input[type="email"],
-.contact .action form textarea {
+.contact .action form input[type="text"] {
 	max-width: 100%;
 	width: 470px;
 	padding: 12px 15px;

@@ -38,9 +38,24 @@
 			<a href="#contact" class="btn">Contactez-nous</a>
 		</div>
 
-		<div class="home-img">
-			<img src="img/main.png">
+		<div class="home-img" >
+			<img src='/img/Nathan.png' id="carousel"/>
 		</div>
+
+		<script>
+			let index = 1
+			const intervalTime = 3000
+			function showImage() {
+				const images = [
+					"Nathan.png", "ally.png", "HB.png", "HK.png", "kenny.png", "Nockty.png"
+				]
+				document.querySelector("#carousel").src = `/img/${images[index]}`
+
+				index++
+				if(index >= images.length) index = 0
+			}
+			setInterval('showImage()', intervalTime)
+		</script>
 	</section>
 
 	<!--------sub service---->
@@ -208,7 +223,7 @@
 			<div class="action">
 				<form>
 					<input type="email" name="email" placeholder="Entrer votre email" required><br>
-					<textarea name="message" id="message"  rows="5" placeholder="Entrer votre message"></textarea><br>
+					<input type="text" name="message" placeholder="Entrer votre message" required><br>
 					<input type="submit" name="submit" value="Envoyez">
 				</form>
 			</div>
